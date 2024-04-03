@@ -436,6 +436,7 @@ function saveName() {
 function checkAns(uans, num) {
   if (uans == quizData.Question[num].ans) {
     alert("HOORAAYYY!!");
+    randQuiz();
   }
 }
 function editButton(btn, num, option) {
@@ -449,7 +450,7 @@ function editButton(btn, num, option) {
 }
 function randQuiz() {
   if (state == 1) {
-    var num = Math.floor(Math.random() * 5);
+    var num = Math.floor(Math.random() * 83);
     document.getElementById("ques").innerHTML =
       "Q." + quizData.Question[num].question;
     document.getElementById("qdiv").appendChild(editButton(btn1, num, "a"));
